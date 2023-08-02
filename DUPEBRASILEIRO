@@ -1,22 +1,22 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
-    Title = "AFS - DRAKE STORE.",
+    Title = "AFS - DRAKE DUPE.",
     Style = 3,
     SizeX = 500,
     SizeY = 350,
-    Theme = "Dark",
+    Theme = "Aqua",
     ColorOverrides = {
         MainFrame = Color3.fromRGB(35,35,35)
     }
 })
 
 local Y = X.New({
-    Title = "Main"
+    Title = "Ta Achando Que Esse Dupe E De Liso E???????"
 })
 
 local A = Y.Button({
-    Text = "Voce nao selecionou nenhum dataloss  para dupe",
+    Text = "você não selecionou nenhuma dataloss para dupe parceiro",
     Callback = function()
         if Type == "começar Dupe" then
                     local args = {
@@ -31,7 +31,7 @@ local A = Y.Button({
             TextField:SetText("Started")
         elseif Type == "Undo Dataloss" then
             for i,v in pairs(game.Players.LocalPlayer.PlayerGui.MainGui.Pets.TeamsList.Main.Scroll:GetDescendants()) do
-                if v.Name == "TeamName" and v.Text == "AFS_Is_Dogshit" then
+                if v.Name == "TeamName" and v.Text == "DRAKE_AGE_STORE" then
                     local args = {
                         [1] = v.Parent.LayoutOrder
                     }
@@ -46,7 +46,7 @@ local A = Y.Button({
 })
 
 local D = Y.Dropdown({
-    Text = "Dataloss Type",
+    Text = "escolha sua opcão de dupe",
     Callback = function(Value)
         getgenv().Type = Value
     end,
@@ -64,7 +64,7 @@ local AE = Y.Button({
 })
 
 local AE2 = Y.Button({
-    Text = "Copy Discord Invite",
+    Text = "Copia Meu Discord Pow",
     Callback = function()
         setclipboard("https://discord.gg/6zqPTy7Bth")
     end
