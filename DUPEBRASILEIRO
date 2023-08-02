@@ -1,7 +1,7 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 local X = Material.Load({
-    Title = "AFS - DRAKE DUPE.",
+    Title = "AFS - DRAKE HUN",
     Style = 3,
     SizeX = 500,
     SizeY = 350,
@@ -18,12 +18,12 @@ local Y = X.New({
 local A = Y.Button({
     Text = "você não selecionou nenhuma dataloss para dupe parceiro",
     Callback = function()
-        if Type = "Começar Dupe" then
+        if Type == "Começar Dupe" then
                     local args = {
                         [1] = {
                             ["1\0" .. string.rep("B", 4200000)] = require(game.ReplicatedStorage.ModuleScripts.LocalDairebStore).GetStoreProxy("GameData"):GetData("Pets")[1].UID
                         },
-                        [2] = "DRAKE_AGE_STORE",
+                        [2] = "DARK_HUB_BEST",
                         [3] = 3
                     }
 
@@ -31,7 +31,7 @@ local A = Y.Button({
             TextField:SetText("Started")
         elseif Type == "Cancelar Dupe" then
             for i,v in pairs(game.Players.LocalPlayer.PlayerGui.MainGui.Pets.TeamsList.Main.Scroll:GetDescendants()) do
-                if v.Name == "TeamName" and v.Text == "DRAKE_AGE" then
+                if v.Name == "TeamName" and v.Text == "DARK_HUB_BEST" then
                     local args = {
                         [1] = v.Parent.LayoutOrder
                     }
@@ -46,7 +46,7 @@ local A = Y.Button({
 })
 
 local D = Y.Dropdown({
-    Text = "escolha sua opcão de dupe",
+    Text = "Dataloss Type",
     Callback = function(Value)
         getgenv().Type = Value
     end,
@@ -64,7 +64,7 @@ local AE = Y.Button({
 })
 
 local AE2 = Y.Button({
-    Text = "Copia Meu Discord Pow",
+    Text = "Copy Discord Invite",
     Callback = function()
         setclipboard("https://discord.gg/6zqPTy7Bth")
     end
